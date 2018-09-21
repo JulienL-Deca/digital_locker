@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- SQL XML created by WWW SQL Designer, https://github.com/ondras/wwwsqldesigner/ -->
+<!-- Active URL: http://ondras.zarovi.cz/sql/demo/?keyword=default -->
+<sql>
+<datatypes db="mysql">
+	<group color="rgb(238,238,170)" label="Numeric">
+		<type label="Integer" quote="" sql="INTEGER" length="0"/>
+	 	<type label="TINYINT" quote="" sql="TINYINT" length="0"/>
+	 	<type label="SMALLINT" quote="" sql="SMALLINT" length="0"/>
+	 	<type label="MEDIUMINT" quote="" sql="MEDIUMINT" length="0"/>
+	 	<type label="INT" quote="" sql="INT" length="0"/>
+		<type label="BIGINT" quote="" sql="BIGINT" length="0"/>
+		<type label="Decimal" quote="" sql="DECIMAL" length="1" re="DEC"/>
+		<type label="Single precision" quote="" sql="FLOAT" length="0"/>
+		<type label="Double precision" quote="" sql="DOUBLE" length="0" re="DOUBLE"/>
+	</group>
+
+	<group color="rgb(255,200,200)" label="Character">
+		<type label="Char" quote="'" sql="CHAR" length="1"/>
+		<type label="Varchar" quote="'" sql="VARCHAR" length="1"/>
+		<type label="Text" quote="'" sql="MEDIUMTEXT" length="0" re="TEXT"/>
+		<type label="Binary" quote="'" sql="BINARY" length="1"/>
+		<type label="Varbinary" quote="'" sql="VARBINARY" length="1"/>
+		<type label="BLOB" quote="'" sql="BLOB" length="0" re="BLOB"/>
+	</group>
+
+	<group color="rgb(200,255,200)" label="Date &amp; Time">
+		<type label="Date" quote="'" sql="DATE" length="0"/>
+		<type label="Time" quote="'" sql="TIME" length="0"/>
+		<type label="Datetime" quote="'" sql="DATETIME" length="0"/>
+		<type label="Year" quote="" sql="YEAR" length="0"/>
+		<type label="Timestamp" quote="'" sql="TIMESTAMP" length="0"/>
+	</group>
+
+	<group color="rgb(200,200,255)" label="Miscellaneous">
+		<type label="ENUM" quote="" sql="ENUM" length="1"/>
+		<type label="SET" quote="" sql="SET" length="1"/>
+		<type label="Bit" quote="" sql="bit" length="0"/>
+	</group>
+</datatypes><table x="73" y="201" name="sport_users">
+<row name="id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="geonaute_id" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="first_name" null="1" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>NULL</default></row>
+<row name="lastname" null="1" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>NULL</default></row>
+<row name="email" null="1" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>NULL</default></row>
+<row name="age" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="country" null="1" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>NULL</default></row>
+<row name="language" null="1" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>NULL</default></row>
+<row name="weight" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="size" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="image_url" null="1" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>NULL</default></row>
+<row name="token" null="1" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="557" y="312" name="decathlon_members">
+<row name="id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="fullname" null="1" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>NULL</default></row>
+<row name="email" null="1" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>NULL</default></row>
+<row name="sport" null="1" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>NULL</default></row>
+<row name="job_title" null="1" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>NULL</default></row>
+<row name="image_url" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="801" y="301" name="products">
+<row name="id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="decathlon_id" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="title" null="1" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>NULL</default></row>
+<row name="image_path" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="decathlon_member_id" null="1" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>NULL</default><relation table="decathlon_members" row="id" />
+</row>
+<row name="lifetime_max" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="product_owner_message" null="1" autoincrement="0">
+<datatype>MEDIUMTEXT</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+<comment>Une vingtaine de produits "maitrisés"</comment>
+</table>
+<table x="401" y="504" name="activities">
+<row name="id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="name" null="1" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>NULL</default></row>
+<row name="sport" null="1" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>NULL</default></row>
+<row name="sport_user_id" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="sport_users" row="id" />
+</row>
+<row name="start_date" null="1" autoincrement="0">
+<datatype>TIMESTAMP</datatype>
+<default>NULL</default></row>
+<row name="end_date" null="1" autoincrement="0">
+<datatype>TIMESTAMP</datatype>
+<default>NULL</default></row>
+<row name="duration" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="elevation" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="latitude" null="1" autoincrement="0">
+<datatype>DOUBLE</datatype>
+<default>NULL</default></row>
+<row name="longitude" null="1" autoincrement="0">
+<datatype>DOUBLE</datatype>
+<default>NULL</default></row>
+<row name="comment" null="1" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>NULL</default></row>
+<row name="thumbnail" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="tag" null="1" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>NULL</default></row>
+<row name="weather" null="1" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="803" y="657" name="data_summaries">
+<row name="id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="activity_id" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="activities" row="id" />
+</row>
+<row name="distance" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="duration" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="etc..." null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="303" y="284" name="feedbacks">
+<row name="id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="gear_id" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="gears" row="id" />
+</row>
+<row name="content" null="1" autoincrement="0">
+<datatype>MEDIUMTEXT</datatype>
+<default>NULL</default></row>
+<row name="date" null="1" autoincrement="0">
+<datatype>TIMESTAMP</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="802" y="540" name="activity_products">
+<row name="id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="activity_id" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="activities" row="id" />
+</row>
+<row name="product_id" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="products" row="id" />
+</row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="1098" y="297" name="advices">
+<row name="id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="product_id" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="products" row="id" />
+</row>
+<row name="content" null="1" autoincrement="0">
+<datatype>MEDIUMTEXT</datatype>
+<default>NULL</default></row>
+<row name="picture" null="1" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+<comment>To reach sphere api</comment>
+</table>
+<table x="759" y="78.72727274894714" name="gears">
+<row name="id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="product_id" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="products" row="id" />
+</row>
+<row name="lifetime_progress" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="purchase_date" null="1" autoincrement="0">
+<datatype>DATE</datatype>
+<default>NULL</default></row>
+<row name="usable" null="1" autoincrement="0">
+<datatype>BINARY</datatype>
+<default>NULL</default></row>
+<row name="sport_user_id" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="sport_users" row="id" />
+</row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="410" y="28" name="feedbacks_answers">
+<row name="id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="feedback_id" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="feedbacks" row="id" />
+</row>
+<row name="content" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="decathlon_member_id" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="decathlon_members" row="id" />
+</row>
+<row name="parent_id" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="feedbacks_answers" row="id" />
+</row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+<comment>si decathlon_member_id est null, ça veut dire que c'est un sport user...</comment>
+</table>
+</sql>
