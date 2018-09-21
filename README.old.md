@@ -1,2 +1,0 @@
-# Digital-Locker
-"vestiaire connecté"
